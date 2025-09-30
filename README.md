@@ -1,6 +1,13 @@
 # Learn-PostgreSQL
 
 ### use pgAdmin to CREATE a Table
+```sql
+CREATE TABLE capitals (
+id SERIAL PRIMARY KEY,
+country VARCHAR(45),
+capital VARCHAR(45)
+);
+```
 
 ### READ data from a Postgres database
 
