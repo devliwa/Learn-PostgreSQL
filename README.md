@@ -24,7 +24,7 @@ db.connect();
 
 db.query("SELECT * FROM capitals", (err, res) => {
    if (err) {
-    console.error("Error executing query", err.stack;
+    console.error("Error executing query", err.stack);
    }
    else {
    quiz = res.row;
