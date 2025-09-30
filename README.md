@@ -10,6 +10,30 @@ capital VARCHAR(45)
 ```
 
 ### READ data from a Postgres database
+```js
+import pg from "pg";
+
+const db = new pg.Client({
+  user: "pstgres",
+  host: "localhost",
+  database: "world",
+  password: "123456",
+  port: 5432,
+});
+db.connect();
+
+db.query("SELECT * FROM capitals", (err, res) => {
+   if (err) {
+    console.error("Error executing query", err.stack;
+   }
+   else {
+   quiz = res.row;
+   }
+
+   db.end();
+ });
+```
+
 
 ### Query data using SELECT, WHERE, and LIKE
 
