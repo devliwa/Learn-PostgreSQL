@@ -108,10 +108,19 @@ country_name VARCHAR(100)
 );
 ```
 
-### Tavel Tracker Part 3
-
 ### One to One Relationship and Inner Joins
+```sql
+CREATE TABLE student (
+  id SERIAL PRIMARY KEY,
+  first_name TEXT,
+  last_name TEXT
+);
 
+CREATE TABLE contact_detail (
+  id INTEGER REFERENCES student(id) UNIQUE,
+  tel TEXT,
+);
+```
 ### One to Many Relationships
 
 ### The Family Travel Tracker
