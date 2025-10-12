@@ -136,6 +136,10 @@ CREATE TABLE homework_submission (
   mark INTEGER,
   student_id INTEGER REFERENCES student(id)
 );
+
+SELECT * FROM student
+JOIN homework_subission
+ON stuent.id = student_id
 ```
 
 ### The Family Travel Tracker
