@@ -72,7 +72,14 @@ SELECT rice_production FROM world_food WHERE country = 'United States';
 
 SELECT country FROM world_food WHERE wheat_production > 20;
 ```
+Where Like(
+```sql
+SELECT <COLUMN> FROM <TABLE> WHERE <COLUMN> LIKE <PATTERN>;
 
+SELECT country FROM world_food WHERE country LIKE 'U' || '%';
+
+SELECT county FROM world food WHERE country LIKE '%' || 'a';
+```
 ### UNIQUE and NOT NULL | Travel Tracker Part 1
 
 ### INSERT and add Data | Travel Tracker Part 2
