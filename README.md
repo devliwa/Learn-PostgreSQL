@@ -43,6 +43,33 @@ country VARCHAR(45),
 rice_production FLOAT,
 wheat_production FLOAT
 );
+```
+Select All
+```python
+SELECT * FROM <TABLE>;
+
+SELECT * FROM world_food;
+```
+Select Column
+```python
+SELECT <COLUMN> FROM <TABLE>;
+
+SELECT * FROM world_food;
+
+SELECT country FROM world_food;
+```
+Select Multi-Column
+```pyhton
+SELECT <COLUMN>, <COLUMN> FROM <TABLE>;
+
+SELECT country, wheat_production FROM world_food;
+```
+Where Equals(>, <, >=, <=)
+```python
+SELECT <COLUMN> FROM <TABLE> WHERE <CONDITION>;
+
+SELECT rice_production FROM world_food WHERE country = 'United States';
+```
 
 ### UNIQUE and NOT NULL | Travel Tracker Part 1
 
