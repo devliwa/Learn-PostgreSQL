@@ -123,6 +123,19 @@ CREATE TABLE contact_detail (
 );
 ```
 ### One to Many Relationships
+```sql
+CREATE TABLE student (
+  id SERIAL PRIMARY KEY,
+  first_name TEXT,
+  last_name TEXT
+);
+
+CREATE TABLE homework_submission (
+  id SERIAL PRIMARY KEY,
+  mark INTEGER,
+  student_id INTEGER REFERENCES student(id)
+);
+```
 
 ### The Family Travel Tracker
 
