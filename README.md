@@ -72,7 +72,7 @@ SELECT rice_production FROM world_food WHERE country = 'United States';
 
 SELECT country FROM world_food WHERE wheat_production > 20;
 ```
-Where Like(
+Where Like
 ```sql
 SELECT <COLUMN> FROM <TABLE> WHERE <COLUMN> LIKE <PATTERN>;
 
