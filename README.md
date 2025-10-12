@@ -81,8 +81,32 @@ SELECT country FROM world_food WHERE country LIKE 'U' || '%';
 SELECT county FROM world food WHERE country LIKE '%' || 'a';
 ```
 ### UNIQUE and NOT NULL | Travel Tracker Part 1
-
+```sql
+CREATE TABLE visited_countries(
+  id SERIAL PRIMARY KEY,
+  country_code CHAR(2) NOT NULL UNIQUE
+)
+```
 ### INSERT and add Data | Travel Tracker Part 2
+Insert Data
+```sql
+INSERT INTO <TABLE> (<COLUMN1>,
+<COLUMN1>) VALUES(<VALUE1>, <VALUE2>)
+```
+example
+```sql
+INSERT INTO world_food
+(country, rice_production, wheat_production)
+VALUES ('Italy', 1.46, 7.3);
+```
+example 2
+```sql
+CREATE TABLE countries(
+id SERIAL PRIMARY KEY,
+country_code CHAR(2),
+country_name VARCHAR(100)
+);
+```
 
 ### Tavel Tracker Part 3
 
