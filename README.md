@@ -69,6 +69,8 @@ Where Equals(>, <, >=, <=)
 SELECT <COLUMN> FROM <TABLE> WHERE <CONDITION>;
 
 SELECT rice_production FROM world_food WHERE country = 'United States';
+
+SELECT country FROM world_food WHERE wheat_production > 20;
 ```
 
 ### UNIQUE and NOT NULL | Travel Tracker Part 1
