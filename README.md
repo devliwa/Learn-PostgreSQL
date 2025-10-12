@@ -138,8 +138,15 @@ CREATE TABLE homework_submission (
 );
 
 SELECT * FROM student
-JOIN homework_subission
-ON stuent.id = student_id
+JOIN homework_submission
+ON student.id = student_id
+```
+Select particular columns
+```sql
+SELECT student.id, first_name, last_name, mark
+FROM student
+JOIN homework_submission
+ON student.id = student_id
 ```
 
 ### The Family Travel Tracker
