@@ -45,13 +45,13 @@ wheat_production FLOAT
 );
 ```
 Select All
-```python
+```sql
 SELECT * FROM <TABLE>;
 
 SELECT * FROM world_food;
 ```
 Select Column
-```python
+```sql
 SELECT <COLUMN> FROM <TABLE>;
 
 SELECT * FROM world_food;
@@ -59,13 +59,13 @@ SELECT * FROM world_food;
 SELECT country FROM world_food;
 ```
 Select Multi-Column
-```pyhton
+```sql
 SELECT <COLUMN>, <COLUMN> FROM <TABLE>;
 
 SELECT country, wheat_production FROM world_food;
 ```
 Where Equals(>, <, >=, <=)
-```python
+```sql
 SELECT <COLUMN> FROM <TABLE> WHERE <CONDITION>;
 
 SELECT rice_production FROM world_food WHERE country = 'United States';
