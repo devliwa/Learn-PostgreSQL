@@ -123,6 +123,7 @@ CREATE TABLE contact_detail (
 );
 ```
 ### One to Many Relationships
+
 ```sql
 CREATE TABLE student (
   id SERIAL PRIMARY KEY,
