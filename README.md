@@ -36,6 +36,13 @@ db.query("SELECT * FROM capitals", (err, res) => {
 
 
 ### Query data using SELECT, WHERE, and LIKE
+```sql
+CREATE TABLE world_food (
+id SERIAL PRIMARY KEY,
+country VARCHAR(45),
+rice_production FLOAT,
+wheat_production FLOAT
+);
 
 ### UNIQUE and NOT NULL | Travel Tracker Part 1
 
