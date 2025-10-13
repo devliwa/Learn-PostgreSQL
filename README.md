@@ -189,6 +189,79 @@ JOIN class c ON c.id = e.class_id;
 
 ### The Family Travel Tracker
 
+
 ### How to UNDATE and DELETE Data and Tables
+Alter Table
+```sql
+ALTER TABLE <TABLE TO ALTER>
+      <DO SOMETHING>
+
+ALTER TABLE student
+      RENAME TO user;
+
+ALTER TABLE user
+      ALTER COLUMN first_name TYPE VARCHAR(20);
+
+ALTER TABLE contact_detail
+      ADD email TEXT
+
+CREATE TABLE example (
+  a integer,
+  b integer,
+  c integer,
+  UNIQUE (a, c)
+);
+```
+Drop Table
+```sql
+DROP TABLE <NAME OF TABLE>
+
+DROP TABLE IF EXISTS visited_countries, users;
+
+CREATE TABLE users(
+id SERIAL PRIMARY KEY,
+name VARCHAR(15) UNIQUE NOT NULL,
+color VARCHAR(15)
+);
+
+CREATE TABLE visited_countries(
+id SERIAL PRIMARY KEY,
+country_code CHAR(2) NOT NULL,
+user_id INTEGER REFERENCES users(id)
+);
+```
+Update Data
+```sql
+UPDATE <TABLE TO UPDATE>
+SET <COLUMN TO UPDATE> = value, ...
+WHERE <SOME CONDITION>;
+
+-- example ---
+UPDATE users
+  SET name = 'Charles'
+  WHERE id = 1
+```
+Order By
+```sql
+SELECT * FROM <SOME TABLE>
+ORDER BY <SOME CONDITION>;
+
+SELECT * FROM users
+ORDER BY id ASC;
+
+SELECT * FROM users
+ORDER BY name DESC
+```
+Delete Data
+```sql
+DELETE FROM <TABLE TO DELETE>
+WHERE <SOME CONDITION>;
+
+DELETE FROM visited_countries
+WHERE id = 6
+
+DELETE FROM visited_countries
+WHERE user_id = 1 AND county_code = 'FR'
+```
 
 ### Permalist Project
