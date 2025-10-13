@@ -148,6 +148,44 @@ FROM student
 JOIN homework_submission
 ON student.id = student_id
 ```
+### Many to Many Relationships and Aliases
+```sql
+CREATE TABLE class (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(45)
+
+);
+CREATE TABLE enrollment (
+  student_id INTEGER REFERENCES student(id),
+  class_id INTEGER REFERENCES class(id),
+  PRIMARY KEY (student_id, class_id)
+);
+
+SELECT *
+FROM enrollment 
+JOIN student ON student.id = enrollment.student_id
+JOIN class ON class.id = enrollment.class_id;
+```
+Aliases: using the AS keyword
+```sql
+SELECT student.id AS id, first_name, last_name, title
+FROM enrollment 
+JOIN student ON student.id = enrollment.student_id
+JOIN class ON class.id = enrollment.class_id;
+
+-- ALIAS --
+SELECT s.id AS id, first_name, last_name, title
+FROM enrollment AS e
+JOIN student AS s ON s.id = e.student_id
+JOIN class AS c ON c.id = e.class_id;
+
+
+SELECT s.id AS id, first_name, last_name, title
+FROM enrollment e
+JOIN student s ON s.id = e.student_id
+JOIN class c ON c.id = e.class_id;
+```
+
 
 ### The Family Travel Tracker
 
